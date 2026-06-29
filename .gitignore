@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+omniscan.log
+omniscan_partial*.json
+.vscode/
+.output/
+.DS_Store
+.env

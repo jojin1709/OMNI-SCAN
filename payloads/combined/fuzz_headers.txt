@@ -1,0 +1,7 @@
+X-Forwarded-For: 127.0.0.1
+X-Real-IP: 127.0.0.1
+X-Original-URL: /admin
+X-Rewrite-URL: /admin
+X-Host: localhost
+X-Forwarded-Host: localhost
+X-Custom-IP-Authorization: 127.0.0.1

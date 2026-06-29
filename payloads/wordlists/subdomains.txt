@@ -1,0 +1,16 @@
+www
+mail
+ftp
+api
+dev
+staging
+test
+demo
+blog
+shop
+secure
+vpn
+portal
+admin
+panel
+app

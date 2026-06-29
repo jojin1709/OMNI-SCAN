@@ -1,0 +1,9 @@
+=cmd|' /C calc'!A0
+=cmd|' /C calc'!A1
++cmd|' /C calc'!A0
+@SUM(1+1)*cmd
+=1+1+cmd
+=cmd
+-HIDDEN_CMD
+|cmd
+%0Acmd

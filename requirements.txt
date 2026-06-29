@@ -1,0 +1,49 @@
+# Core
+requests>=2.31.0
+urllib3>=2.0.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+html5lib>=1.1
+
+# Crawling & Parsing
+selenium>=4.15.0
+playwright>=1.40.0
+cssutils>=2.9.0
+jsbeautifier>=1.14.0
+esprima>=4.0.1
+chompjs>=1.1.0
+
+# Network
+dnspython>=2.4.0
+scapy>=2.5.0
+aiohttp>=3.9.0
+httpx>=0.25.0
+socksio>=1.0.0
+stem>=1.8.0                    # Tor support
+
+# SQLi specific
+sqlparse>=0.4.4
+
+# JWT
+PyJWT>=2.8.0
+
+# Cryptography
+cryptography>=41.0.0
+pycryptodome>=3.19.0
+
+# Reports
+jinja2>=3.1.0
+weasyprint>=60.0               # PDF generation
+markdown>=3.5.0
+markdown2>=2.4.0
+
+# Misc
+colorama>=0.4.6
+tqdm>=4.66.0
+pyyaml>=6.0
+tabulate>=0.9.0
+whois>=0.9.0
+shodan>=1.28.0
+censys>=2.2.0
+tldextract>=5.1.0
+phonenumbers>=8.13.0
