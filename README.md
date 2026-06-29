@@ -1,5 +1,8 @@
 # 🚀 OmniScan — All-in-One Bug Bounty & Pentesting Scanner
 
+**Developed by JOJIN JOHN**
+
+---
 
 **OmniScan** is an all-in-one web application security scanner built specifically for bug bounty hunters and penetration testers. It detects **every vulnerability class** in one unified scan — SQLi, XSS, RCE, IDOR, Privilege Escalation, Auth Bypass, Business Logic Flaws, LFI/RFI, XXE, SSRF, CORS, CSRF, Open Redirect, Secrets Leaks, File Upload bugs, CSV Injection, and AI Model attacks.
 
@@ -959,6 +962,12 @@ CWE MITRE
 MITRE ATT&CK
 ⚠️ Legal Notice
 OmniScan is designed for authorized security testing only. Always obtain explicit written permission before testing any system you do not own. Unauthorized scanning may violate computer fraud laws in your jurisdiction. The authors are not responsible for misuse.
+
+## 📄 License
+
+**Copyright (c) 2026 JOJIN JOHN. All Rights Reserved.**
+
+OmniScan is proprietary software. Unauthorized copying, modification, distribution, or use is prohibited. See LICENSE file for full terms.
 
 
 
