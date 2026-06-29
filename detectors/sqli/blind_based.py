@@ -12,16 +12,17 @@ class SQLBlindDetector(DetectorBase):
                     start = time.time()
                     resp = self.engine.requester.get(test_url) if self.engine.requester else None
                     elapsed = time.time() - start
-                    if elapsed >= 4.5:
-                        findings.append({
-                            "type": "sqli_blind",
-                            "name": "SQL Injection (Blind)",
-                            "severity": "high",
-                            "url": test_url,
-                            "payload": payload,
-                            "evidence": f"Response time: {elapsed:.2f}s",
-                            "description": "Blind SQL injection detected via time delays"
-                        })
+                    if elapsed >= 4.5 and resp:
+                        if "SQL" not in resp.text and "syntax" not in resp.text.lower():
+                            findings.append({
+                                "type": "sqli_blind",
+                                "name": "SQL Injection (Blind)",
+                                "severity": "high",
+                                "url": test_url,
+                                "payload": payload,
+                                "evidence": f"Response time: {elapsed:.2f}s",
+                                "description": "Blind SQL injection detected via time delays"
+                            })
                 except Exception:
                     pass
         return findings
