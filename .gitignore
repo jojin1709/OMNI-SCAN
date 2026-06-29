@@ -4,6 +4,6 @@ __pycache__/
 omniscan.log
 omniscan_partial*.json
 .vscode/
-.output/
+output/
 .DS_Store
 .env
