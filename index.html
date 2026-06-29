@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniScan - All-in-One Bug Bounty Scanner</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tagline {
+            font-size: 1.3em;
+            color: #bdc3c7;
+            margin: 20px 0;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+        }
+        .section {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+        }
+        code, pre {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 5px;
+            padding: 15px;
+            display: block;
+            overflow-x: auto;
+        }
+        pre {
+            margin: 15px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #30363d;
+        }
+        th {
+            background: rgba(52, 152, 219, 0.2);
+        }
+        .cmd {
+            color: var(--success);
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.08);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        .vuln-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .vuln-card {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>OmniScan</h1>
+            <p class="tagline">All-in-One Bug Bounty & Pentesting Scanner</p>
+            <div>
+                <span class="badge">v1.0.0</span>
+                <span class="badge">Python</span>
+                <span class="badge">Security</span>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>What is OmniScan?</h2>
+            <p>OmniScan is an all-in-one web application security scanner designed for bug bounty hunters and penetration testers. It detects 18 vulnerability classes in a single unified scan, including SQL Injection, XSS, RCE, IDOR, Privilege Escalation, and more.</p>
+        </section>
+
+        <section class="section">
+            <h2>🎯 Features</h2>
+            <div class="feature-list">
+                <div class="feature-card">
+                    <h3>40+ Detectors</h3>
+                    <p>Run all vulnerability detectors in parallel for comprehensive coverage</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Smart Crawling</h3>
+                    <p>Discovers endpoints, forms, API routes, JS files, and hidden parameters</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Multi-Format Reports</h3>
+                    <p>JSON, HTML, Markdown, and TXT output formats</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Authentication Support</h3>
+                    <p>Form login, cookies, JWT, OAuth, and bearer tokens</p>
+                </div>
+                <div class="feature-card">
+                    <h3>OOB Testing</h3>
+                    <p>Built-in callback server for blind vulnerabilities</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Proxy & Tor</h3>
+                    <p>Support for Burp, ZAP, and Tor routing</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🛡️ Vulnerabilities Detected</h2>
+            <div class="vuln-grid">
+                <div class="vuln-card">SQL Injection (sqli)</div>
+                <div class="vuln-card">XSS (xss)</div>
+                <div class="vuln-card">RCE (rce)</div>
+                <div class="vuln-card">IDOR (idor)</div>
+                <div class="vuln-card">PrivEsc (privesc)</div>
+                <div class="vuln-card">Auth Bypass (auth)</div>
+                <div class="vuln-card">Business Logic (logic)</div>
+                <div class="vuln-card">LFI/RFI (lfi/rfi)</div>
+                <div class="vuln-card">XXE (xxe)</div>
+                <div class="vuln-card">SSRF (ssrf)</div>
+                <div class="vuln-card">CORS (cors)</div>
+                <div class="vuln-card">CSRF (csrf)</div>
+                <div class="vuln-card">Open Redirect (redirect)</div>
+                <div class="vuln-card">Secrets Leak (secrets)</div>
+                <div class="vuln-card">File Upload (upload)</div>
+                <div class="vuln-card">CSV Injection (csv)</div>
+                <div class="vuln-card">AI Model (ai)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📦 Installation</h2>
+            <pre><code># Clone the repository
+git clone https://github.com/jojin1709/OMNI-SCAN.git
+cd OMNI-SCAN
+
+# Install dependencies
+pip3 install -r requirements.txt</code></pre>
+        </section>
+
+        <section class="section">
+            <h2>🚀 Quick Start</h2>
+            <h3>Basic Scan</h3>
+            <pre><code>python3 omniscan.py -t https://target.com --all</code></pre>
+
+            <h3>Quick Scan (High-Signal Only)</h3>
+            <pre><code>python3 omniscan.py -t https://target.com --quick</code></pre>
+
+            <h3>With Authentication</h3>
+            <pre><code>python3 omniscan.py -t https://target.com \
+    --cookie "sessionid=abc123" \
+    --all</code></pre>
+
+            <h3>With Callback Server</h3>
+            <pre><code>python3 omniscan.py -t https://target.com \
+    --callback-port 8888 \
+    --all</code></pre>
+        </section>
+
+        <section class="section">
+            <h2>📋 Command Reference</h2>
+            <table>
+                <thead>
+                    <tr><th>Option</th><th>Description</th><th>Default</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>-t, --target</code></td><td>Target URL</td><td>-</td></tr>
+                    <tr><td><code>-T, --targets-file</code></td><td>File with target URLs</td><td>-</td></tr>
+                    <tr><td><code>--all</code></td><td>Run all detectors</td><td>False</td></tr>
+                    <tr><td><code>--quick</code></td><td>Fast scan mode</td><td>False</td></tr>
+                    <tr><td><code>--threads</code></td><td>Concurrent threads</td><td>20</td></tr>
+                    <tr><td><code>--timeout</code></td><td>Request timeout (seconds)</td><td>15</td></tr>
+                    <tr><td><code>--max-pages</code></td><td>Max pages to crawl</td><td>200</td></tr>
+                    <tr><td><code>--depth</code></td><td>Crawl depth</td><td>3</td></tr>
+                    <tr><td><code>--proxy</code></td><td>HTTP/SOCKS proxy</td><td>-</td></tr>
+                    <tr><td><code>--output</code></td><td>Output directory</td><td>./output/</td></tr>
+                    <tr><td><code>--format</code></td><td>Report format</td><td>all</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2>📁 Project Structure</h2>
+            <pre><code>omniscan/
+├── omniscan.py              # Main entry point
+├── core/                  # Core modules
+│   ├── crawler.py
+│   ├── requester.py
+│   ├── auth_manager.py
+│   └── report_builder.py
+├── detectors/             # 40 vulnerability detectors
+├── payloads/              # Payload databases
+└── README.md</code></pre>
+        </section>
+    </div>
+
+    <footer>
+        <p>Developed by JOJIN JOHN | <a href="https://github.com/jojin1709/OMNI-SCAN">GitHub</a></p>
+    </footer>
+</body>
+</html>
